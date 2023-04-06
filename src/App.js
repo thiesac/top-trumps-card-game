@@ -14,7 +14,7 @@ class App extends React.Component {
     cardTrunfo: false,
     hasTrunfo: false,
     isSaveButtonDisabled: true,
-    // deck: [],
+    cardsDeck: [],
   };
 
   validationFields = () => {
@@ -32,14 +32,14 @@ class App extends React.Component {
     const minValue = 0;
     const maxValueSumAtt = 210;
     const getAttr = (Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3)); // soma atributos
-    const valAtt1 = cardAttr1 >= minValue && cardAttr1 <= maxValueAtt;
-    const valAtt2 = cardAttr2 >= minValue && cardAttr2 <= maxValueAtt;
+    const valAtt1 = Number(cardAttr1) >= minValue && Number(cardAttr1) <= maxValueAtt;
+    const valAtt2 = Number(cardAttr2) >= minValue && Number(cardAttr2) <= maxValueAtt;
+    const valAtt3 = Number(cardAttr3) >= minValue && Number(cardAttr3) <= maxValueAtt;
     const valSumAttr = getAttr <= maxValueSumAtt; // soma dos atributos menor que 210
-    const valAtt3 = cardAttr3 >= minValue && cardAttr3 <= maxValueAtt;
-    const valDesc = cardDescription.length > minValue; // valida a descrição
-    const valImg = cardImage.length > minValue; // valida imagem
-    const valRarity = cardRare.length > minValue; // valida raridade
-    const valName = cardName.length > minValue; // valida nome
+    const valDesc = cardDescription !== ''; // valida a descrição
+    const valImg = cardImage !== ''; // valida imagem
+    const valRarity = cardRare !== ''; // valida raridade
+    const valName = cardName !== ''; // valida nome
 
     this.setState({
       isSaveButtonDisabled:
@@ -65,6 +65,21 @@ class App extends React.Component {
   };
 
   onSaveButtonClick = () => {
+    const card = this.state;
+
+    this.setState((prevState) => ({
+      cardName: '',
+      cardDescription: '',
+      cardAttr1: '',
+      cardAttr2: '',
+      cardAttr3: '',
+      cardImage: '',
+      cardRare: 'normal',
+      cardTrunfo: false,
+      hasTrunfo: false,
+      isSaveButtonDisabled: true,
+      cardsDeck: [...prevState, card],
+    }));
   };
 
   render() {
@@ -113,4 +128,3 @@ class App extends React.Component {
 }
 
 export default App;
-// iniciando projeto

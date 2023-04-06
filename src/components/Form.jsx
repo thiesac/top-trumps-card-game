@@ -75,7 +75,7 @@ class Form extends React.Component {
             onChange={ onInputChange }
           />
         </label>
-        <label htmlFor="card-description">
+        <label htmlFor="image-input">
           Imagem
           <input
             type="text"
