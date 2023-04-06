@@ -102,14 +102,18 @@ class Form extends React.Component {
         </label>
         <label htmlFor="trunfo-input">
           Super Trybe Trunfo
-          <input
-            type="checkbox"
-            data-testid="trunfo-input"
-            id="trunfo-input"
-            name="cardTrunfo"
-            checked={ cardTrunfo }
-            onChange={ onInputChange }
-          />
+          {
+            (
+              hasTrunfo ? <p>Você já tem um Super Trunfo em seu baralho</p> : <input
+                type="checkbox"
+                data-testid="trunfo-input"
+                id="trunfo-input"
+                name="cardTrunfo"
+                checked={ cardTrunfo }
+                onChange={ onInputChange }
+              />
+            )
+          }
         </label>
         <button
           data-testid="save-button"
@@ -119,7 +123,6 @@ class Form extends React.Component {
         >
           Salvar
         </button>
-        <p>{ hasTrunfo }</p>
       </form>
     );
   }

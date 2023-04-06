@@ -68,11 +68,12 @@ class App extends React.Component {
     const card = this.state;
 
     this.setState((prevState) => ({
+      hasTrunfo: prevState.cardTrunfo ? true : prevState.hasTrunfo,
       cardName: '',
       cardDescription: '',
-      cardAttr1: 0,
-      cardAttr2: 0,
-      cardAttr3: 0,
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
       cardImage: '',
       cardRare: 'normal',
       cardsDeck: [...prevState.cardsDeck, card],
