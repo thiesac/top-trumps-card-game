@@ -30,15 +30,15 @@ class App extends React.Component {
     const maxValueAtt = 90;
     const minValue = 0;
     const maxValueSumAtt = 120;
-    const getAttr = cardAttr1 + cardAttr2 + cardAttr3;
+    const getAttr = Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3);
     const valName = cardName.length > minValue;
     const valDesc = cardDescription.length > minValue;
     const valImg = cardImage.length > minValue;
     const valRarity = cardRare.length > minValue;
-    const valAtt1 = cardAttr1 >= minValue && cardAttr1 <= maxValueAtt;
-    const valAtt2 = cardAttr2 >= minValue && cardAttr2 <= maxValueAtt;
-    const valAtt3 = cardAttr3 >= minValue && cardAttr3 <= maxValueAtt;
-    const valAttr = getAttr <= maxValueSumAtt;
+    const valAtt1 = Number(cardAttr1) >= minValue && Number(cardAttr1) <= maxValueAtt;
+    const valAtt2 = Number(cardAttr2) >= minValue && Number(cardAttr2) <= maxValueAtt;
+    const valAtt3 = Number(cardAttr3) >= minValue && Number(cardAttr3) <= maxValueAtt;
+    const valSumAttr = getAttr <= maxValueSumAtt;
 
     this.setState({
       isSaveButtonDisabled:
@@ -50,7 +50,7 @@ class App extends React.Component {
           && valAtt1
           && valAtt2
           && valAtt3
-          && valAttr
+          && valSumAttr
         ),
     });
   };
