@@ -38,7 +38,7 @@ class App extends React.Component {
     const valAtt1 = cardAttr1 >= minValue && cardAttr1 <= maxValueAtt;
     const valAtt2 = cardAttr2 >= minValue && cardAttr2 <= maxValueAtt;
     const valAtt3 = cardAttr3 >= minValue && cardAttr3 <= maxValueAtt;
-    const valAttr = getAttr < maxValueSumAtt;
+    const valAttr = getAttr <= maxValueSumAtt;
 
     this.setState({
       isSaveButtonDisabled:
