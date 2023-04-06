@@ -14,6 +14,7 @@ class App extends React.Component {
     cardTrunfo: false,
     hasTrunfo: false,
     isSaveButtonDisabled: true,
+    // deck: [],
   };
 
   validationFields = () => {
@@ -29,16 +30,16 @@ class App extends React.Component {
 
     const maxValueAtt = 90;
     const minValue = 0;
-    const maxValueSumAtt = 120;
-    const getAttr = Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3);
-    const valName = cardName.length > minValue;
-    const valDesc = cardDescription.length > minValue;
-    const valImg = cardImage.length > minValue;
-    const valRarity = cardRare.length > minValue;
-    const valAtt1 = Number(cardAttr1) >= minValue && Number(cardAttr1) <= maxValueAtt;
-    const valAtt2 = Number(cardAttr2) >= minValue && Number(cardAttr2) <= maxValueAtt;
-    const valAtt3 = Number(cardAttr3) >= minValue && Number(cardAttr3) <= maxValueAtt;
-    const valSumAttr = getAttr <= maxValueSumAtt;
+    const maxValueSumAtt = 210;
+    const getAttr = (Number(cardAttr1) + Number(cardAttr2) + Number(cardAttr3)); // soma atributos
+    const valAtt1 = cardAttr1 >= minValue && cardAttr1 <= maxValueAtt;
+    const valAtt2 = cardAttr2 >= minValue && cardAttr2 <= maxValueAtt;
+    const valSumAttr = getAttr <= maxValueSumAtt; // soma dos atributos menor que 210
+    const valAtt3 = cardAttr3 >= minValue && cardAttr3 <= maxValueAtt;
+    const valDesc = cardDescription.length > minValue; // valida a descrição
+    const valImg = cardImage.length > minValue; // valida imagem
+    const valRarity = cardRare.length > minValue; // valida raridade
+    const valName = cardName.length > minValue; // valida nome
 
     this.setState({
       isSaveButtonDisabled:
@@ -61,6 +62,9 @@ class App extends React.Component {
     this.setState({
       [name]: value,
     }, this.validationFields);
+  };
+
+  onSaveButtonClick = () => {
   };
 
   render() {
@@ -91,6 +95,7 @@ class App extends React.Component {
           hasTrunfo={ hasTrunfo }
           isSaveButtonDisabled={ isSaveButtonDisabled }
           onInputChange={ this.onInputChange }
+          onSaveButtonClick={ this.onSaveButtonClick }
         />
         <Card
           cardName={ cardName }
