@@ -17,6 +17,16 @@ class App extends React.Component {
   };
 
   validationFields = () => {
+    const {
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardName,
+      cardDescription,
+      cardImage,
+      cardRare,
+    } = this.state;
+
     const maxValueAtt = 90;
     const minValue = 0;
     const maxValueSumAtt = 120;
@@ -25,9 +35,9 @@ class App extends React.Component {
     const valDesc = cardDescription.length > minValue;
     const valImg = cardImage.length > minValue;
     const valRarity = cardRare.length > minValue;
-    const valAtt1 = cardAttr1 > minValue && cardAttr1 <= maxValueAtt;
-    const valAtt2 = cardAttr2 > minValue && cardAttr2 <= maxValueAtt;
-    const valAtt3 = cardAttr3 > minValue && cardAttr3 <= maxValueAtt;
+    const valAtt1 = cardAttr1 >= minValue && cardAttr1 <= maxValueAtt;
+    const valAtt2 = cardAttr2 >= minValue && cardAttr2 <= maxValueAtt;
+    const valAtt3 = cardAttr3 >= minValue && cardAttr3 <= maxValueAtt;
     const valAttr = getAttr < maxValueSumAtt;
 
     this.setState({
