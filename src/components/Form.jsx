@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Form.css'
 
 class Form extends React.Component {
   render() {
@@ -18,10 +19,11 @@ class Form extends React.Component {
       onSaveButtonClick,
     } = this.props;
     return (
-      <form>
+      <form className="form-fields">
         <label htmlFor="name-input">
           Nome da Carta
           <input
+            className="className-input"
             type="text"
             data-testid="name-input"
             id="name-input"
@@ -33,10 +35,11 @@ class Form extends React.Component {
         <label htmlFor="card-description">
           Descrição da Carta
           <textarea
+            className="classCard-description"
             data-testid="description-input"
             id="card-description"
             cols="30"
-            rows="10"
+            rows="5"
             name="cardDescription"
             value={ cardDescription }
             onChange={ onInputChange }
@@ -129,18 +132,18 @@ class Form extends React.Component {
 }
 
 Form.propTypes = {
-  cardName: PropTypes.string.isRequired,
-  cardDescription: PropTypes.string.isRequired,
-  cardAttr1: PropTypes.string.isRequired,
-  cardAttr2: PropTypes.string.isRequired,
-  cardAttr3: PropTypes.string.isRequired,
-  cardImage: PropTypes.string.isRequired,
-  cardRare: PropTypes.string.isRequired,
-  cardTrunfo: PropTypes.bool.isRequired,
-  hasTrunfo: PropTypes.bool.isRequired,
-  isSaveButtonDisabled: PropTypes.bool.isRequired,
-  onInputChange: PropTypes.func.isRequired,
-  onSaveButtonClick: PropTypes.func.isRequired,
-};
+  cardName: PropTypes.string,
+  cardDescription: PropTypes.string,
+  cardAttr1: PropTypes.string,
+  cardAttr2: PropTypes.string,
+  cardAttr3: PropTypes.string,
+  cardImage: PropTypes.string,
+  cardRare: PropTypes.string,
+  cardTrunfo: PropTypes.bool,
+  hasTrunfo: PropTypes.bool,
+  isSaveButtonDisabled: PropTypes.bool,
+  onInputChange: PropTypes.func,
+  onSaveButtonClick: PropTypes.func,
+}.isRequired;
 
 export default Form;
