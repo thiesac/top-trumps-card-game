@@ -97,8 +97,8 @@ class App extends React.Component {
     } = this.state;
     return (
       <>
-        <div>
-          <h1>Tryunfo</h1>
+        <h1>Tryunfo</h1>
+        <div className="div-cards">
           <Form
             cardName={ cardName }
             cardDescription={ cardDescription }
@@ -113,17 +113,17 @@ class App extends React.Component {
             onInputChange={ this.onInputChange }
             onSaveButtonClick={ this.onSaveButtonClick }
           />
+          <Card
+            cardName={ cardName }
+            cardDescription={ cardDescription }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardImage={ cardImage }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+          />
         </div>
-        <Card
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
-        />
         <ul>
           {
             cardsDeck.map((card) => (

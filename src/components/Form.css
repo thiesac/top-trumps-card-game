@@ -1,5 +1,4 @@
 .form-fields {
-  border: 1px solid purple;
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
@@ -7,36 +6,40 @@
   width: 20%;
 }
 
+h2 {
+  color: #748da6;
+}
+
 label {
-  color: purple;
+  color: #748da6;
   display: flex;
   flex-direction: column;
   margin: 10px;
 }
 
 .form-fields input, textarea, select {
-  background-color: #dba8ac50;
-  border: 0.9px solid purple;
+  background-color: white;
+  border: 0.9px solid #748da6;
   outline: 0;
   padding: 5px;
 }
 
 .className-input, .classCard-description {
-  border-color: purple;
+  border-color: #748da6;
   border-width: 0 0 2px;
   outline: 0;
 }
 
 select {
-  color: purple;
+  color: #748da6;
 }
 
 .checkbox-trunfo {
-  border-color: purple;
+  border-color: #748da6;
 }
 
 button {
-  background-color: purple;
+  background-color: #748da6;
   border: none;
   color: white;
   padding: 5px;
