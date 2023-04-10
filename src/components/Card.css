@@ -79,9 +79,9 @@ li img {
   height: px;
 }
 
-li p, h4 {
+/* li p, h4 {
   padding: 2px;
-}
+} */
 
 li p:last-child {
   padding-bottom: 5%;

@@ -82,7 +82,7 @@ class App extends React.Component {
   };
 
   onRemoveBtnClick = (name, trunfo) => {
-    const { cardsDeck, hasTrunfo } = this.state;
+    const { cardsDeck } = this.state;
     const newDeck = cardsDeck.filter((card) => card.cardName !== name);
 
     this.setState({
