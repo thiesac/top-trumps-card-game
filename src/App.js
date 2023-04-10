@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
 import './App.css';
@@ -81,14 +81,14 @@ class App extends React.Component {
     }));
   };
 
-  // useState create a state variable in the component
-  // it returns an array of 2 variables: state and setState
-  // state: visible
-  // setState updates the functions
-  onRemoveButtonClick = (id) => {
-    const [visible, setVisible] = useState(true);
-    const newDeck = visible.cardsDeck.filter((card) => card.id !== id);
-    setVisible(cardsDeck = newDeck);
+  onRemoveBtnClick = (name, trunfo) => {
+    const { cardsDeck, hasTrunfo } = this.state;
+    const newDeck = cardsDeck.filter((card) => card.cardName !== name);
+
+    this.setState({
+      hasTrunfo: trunfo.cardTrunfo ? false : trunfo.hasTrunfo,
+      cardsDeck: newDeck,
+    });
   };
 
   render() {
@@ -151,7 +151,7 @@ class App extends React.Component {
                 />
                 <button
                   data-testid="delete-button"
-                  onClick={ this.onRemoveButtonClick }
+                  onClick={ () => this.onRemoveBtnClick(card.cardName, card.cardTrunfo) }
                 >
                   Excluir
                 </button>

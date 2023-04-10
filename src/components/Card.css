@@ -64,11 +64,26 @@ p:last-child {
   padding-bottom: 20%;
 }
 
+/* ---------------------------------- deque de cartas --------------- */
 ul {
   border: 1px solid black;
   display: flex;
 }
 
-li {
-  border: 2px solid red;
+li .section-card {
+  height: 442px;
+  width: 250px;
 }
+
+li img {
+  height: px;
+}
+
+li p, h4 {
+  padding: 2px;
+}
+
+li p:last-child {
+  padding-bottom: 5%;
+}
+

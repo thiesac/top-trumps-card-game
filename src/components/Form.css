@@ -39,8 +39,14 @@ select {
 }
 
 button {
-  background-color: #748da6;
+  background-color: #d3cedf;
   border: none;
   color: white;
   padding: 5px;
 }
+
+button:enabled {
+  background-color: #748da6;
+  cursor: pointer;
+}
+
