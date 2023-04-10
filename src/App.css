@@ -20,3 +20,9 @@ h1 {
   display: flex;
   justify-content: space-evenly;
 }
+
+li .delete-btn {
+  background-color: rgba(239, 167, 85, 0.985);
+  color: white;
+  margin: 5%;
+}
