@@ -1,6 +1,6 @@
 .section-card {
   align-items: center;
-  background-color: #171314;
+  background-color: #F9ED69;
   border: 1px solid black;
   border-radius: 25px;
   box-shadow: -8px 9px 16px -3px gray;
@@ -13,7 +13,7 @@
 
 /* cor de fundo da carta */
 .card-background {
-  background-color: #bbb;
+  background-color: #B83B5E;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
@@ -24,16 +24,13 @@
 
 /* nome da carta */
 h3 {
-  background: linear-gradient(0deg, rgba(201, 216, 201, 0.3), rgba(201, 216, 209, 0.3));
-  border-bottom: 4px solid darkgrey;
-  border-left: 2px solid darkgray;
+  /* border: 2px solid white; */
+  /* box-shadow: 0px 0px 5px 4px #888888; */
   border-radius: 9px;
-  border-right: 1px solid white;
-  border-top: 1px solid white;
-  box-shadow: 0 0 0 2px #171314, 0 0 0 5px #26714a, -3px 3px 2px 5px #171314;
-  margin-bottom: 2%;
+  color: #f08a5d;
+  margin-bottom: 1%;
   min-height: 30px;
-  padding: 0.5vh;
+  padding: 0.6vh;
   text-align: initial;
   text-transform: capitalize;
 }
@@ -50,14 +47,14 @@ h3 {
 /* imagem da carta */
 img {
   background-color: white;
-  border: 2px solid black;
+  border: 4px solid white;
   /* box-shadow: 0 0 0 2px #171314, 0 0 0 5px #26714a, -3px 3px 2px 5px #171314; */
   display: flex;
   flex-basis: auto;
   max-height: 30vh;
-  max-width: 100%;
+  max-width: 98%;
   min-height: 30vh;
-  min-width: 100%;
+  min-width: 98%;
   object-fit: cover;
 }
 
@@ -69,9 +66,14 @@ img {
 
 /* descrição e atributo da carta */
 .description-card {
-  color: white;
-  display: block;
-  margin: 0 1% 2% 3%;
+  background: #d3ded6b1;
+  box-sizing: border-box;
+  color: #6A2C70;
+  /* display: block; */
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: space-around; */
+  padding: 6vh;
   text-align: left;
   text-transform: initial;
   width: 90%;
@@ -79,11 +81,7 @@ img {
 }
 
 .div-attr {
-  border-bottom: 4px solid darkgrey;
-  border-left: 2px solid darkgray;
-  border-right: 1px solid white;
-  border-top: 1px solid white;
-  box-shadow: 0 0 0 2px #171314, 0 0 0 5px #26714a, -3px 3px 2px 5px #171314;
+  
   border-radius: 9px;
   display: flex;
   flex-direction: row;

@@ -42,7 +42,7 @@ class Form extends React.Component {
             cols="30"
             rows="2"
             name="cardDescription"
-            maxLength={ 68 }
+            maxLength={ 100 }
             value={ cardDescription }
             onChange={ onInputChange }
           />
