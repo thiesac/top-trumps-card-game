@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-  color: #d3cedf;
+  color: black;
   font-size: 50px;
   margin-bottom: 30px;
   text-align: center;
@@ -22,7 +22,7 @@ h1 {
 }
 
 li .delete-btn {
-  background-color: rgba(239, 167, 85, 0.985);
+  background-color: #f08a5d;
   color: white;
   margin: 5%;
 }

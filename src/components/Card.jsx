@@ -28,12 +28,11 @@ class Card extends React.Component {
                 className="p-super-trunfo"
               >
                 Super Trunfo
-                 </p>
+              </p>
               }
               <img src={ cardImage } alt={ cardName } data-testid="image-card" />
             </div>
             <div className="div-attr">
-
               <h4 data-testid="attr1-card" className="first-h4">
                 Attr01
                 <br />
@@ -41,12 +40,12 @@ class Card extends React.Component {
               </h4>
               <h4 data-testid="attr2-card">
                 Attr02
-              <br />
+                <br />
                 { cardAttr2 }
               </h4>
               <h4 data-testid="attr3-card">
                 Attr03
-              <br />
+                <br />
                 { cardAttr3 }
               </h4>
             </div>

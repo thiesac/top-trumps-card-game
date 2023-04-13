@@ -58,10 +58,10 @@ class App extends React.Component {
   };
 
   onInputChange = ({ target }) => {
-    const { name, value } = target;
+    const { name, value, checked } = target;
 
     this.setState({
-      [name]: value,
+      [name]: name === 'cardTrunfo' ? checked : value,
     }, this.validationFields);
   };
 
