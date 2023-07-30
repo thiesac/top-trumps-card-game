@@ -28,6 +28,7 @@ Name, Description, Image, and Rarity must contain information (inputs cannot be 
 The sum of the values of the 3 attributes cannot exceed 210.
 Each attribute can have a maximum of 90 points.
 Attributes cannot have negative values.
+This project was designed for 1920 × 1080 screen.
 
 ### Contributing
 If you want to contribute to Tryunfo, follow these steps:
